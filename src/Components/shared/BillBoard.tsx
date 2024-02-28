@@ -1,9 +1,8 @@
-import { GET_FAIL, GET_REQUEST, GET_SUCCESS } from '@/Helpers/Actions'
 import { getData } from '@/Helpers/httpRequest'
 import { IContent } from '@/Models/IContent'
 import { IStateArr } from '@/Models/States/IStateArr'
 import billboardReducer from '@/Reducers/billBoardReducer'
-import { useEffect, useReducer, useState } from 'react'
+import {  useReducer } from 'react'
 
 const initialState: IStateArr<IContent> ={
     loading: true,
@@ -13,7 +12,7 @@ const initialState: IStateArr<IContent> ={
 
 const BillBoard = () => {
 
-    const [state, dispatch] = useReducer(billboardReducer, initialState);
+    const [state] = useReducer(billboardReducer, initialState);
 
     return (
         <div>

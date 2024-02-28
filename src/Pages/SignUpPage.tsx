@@ -48,13 +48,13 @@ const SignUpPage = () => {
     };
 
     return (
-        <div className="flex justify-center items-center h-screen md:flex-col md:bg-[url('../assets/netflix-bg.jpg')]">
+        <div className="flex items-center bg-cover min-h-screen md:bg-[url('../assets/netflix-bg.jpg')]  flex-col">
             <Title title="Sign Up" />
-            <div className="absolute invisible top-0 left-0 p-4 md:visible">
-                <img src="\assets\Netflix-Logo.wine.svg" alt="Netflix Logo" className="w-10 md:w-auto" />
+            <div className="mx-auto ml-0">
+                <img src="\assets\Netflix-Logo.wine.svg" alt="Netflix Logo" className="w-22 md:w-60" />
             </div>
             <div className="w-full max-w-md px-3 py-3 bg-black bg-opacity-80 rounded-lg md:px-6 md:py-6">
-                <h1 className="text-2xl mb-10 md:text-6xl text-white font-semibold">Sign Up</h1>
+                <h1 className="text-4xl mb-10 md:text-6xl text-white font-semibold">Sign Up</h1>
                 <form onSubmit={submitHandler} className="mb-8">
                     <input
                         type="email"
