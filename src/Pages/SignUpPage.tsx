@@ -53,35 +53,35 @@ const SignUpPage = () => {
             <div className="absolute invisible top-0 left-0 p-4 md:visible">
                 <img src="\assets\Netflix-Logo.wine.svg" alt="Netflix Logo" className="w-10 md:w-auto" />
             </div>
-            <div className="w-full max-w-md px-3 py-3 bg-black bg-opacity-70 rounded-lg md:px-6 md:py-6">
+            <div className="w-full max-w-md px-3 py-3 bg-black bg-opacity-80 rounded-lg md:px-6 md:py-6">
                 <h1 className="text-2xl mb-10 md:text-6xl">Sign Up</h1>
                 <form onSubmit={submitHandler} className="mb-8">
                     <input
                         type="email"
                         placeholder="Email"
                         ref={emailRef}
-                        className="block w-full py-3 px-4 mb-4 bg-black border border-gray-600 rounded-md text-white focus:outline-none focus:border-gray-400"
+                        className="block w-full py-3 px-4 mb-4 bg-stone-700 rounded-md text-white focus:outline-none focus:bg-stone-500"
                     />
                     <input
                         type="text"
                         placeholder="Username"
                         ref={usernameRef}
-                        className="block w-full py-3 px-4 mb-4 bg-black border border-gray-600 rounded-md text-white focus:outline-none focus:border-gray-400"
+                        className="block w-full py-3 px-4 mb-4 bg-stone-700 rounded-md text-white focus:outline-none focus:bg-stone-500"
                     />
                     <input
                         type="password"
                         placeholder="Password"
                         ref={passwordRef}
-                        className="block w-full py-3 px-4 mb-4 bg-black border border-gray-600 rounded-md text-white focus:outline-none focus:border-gray-400"
+                        className="block w-full py-3 px-4 mb-4 bg-stone-700 rounded-md text-white focus:outline-none focus:bg-stone-500"
                     />
                     <input
                         type="password"
                         placeholder="Confirm Password"
                         ref={confirmPasswordRef}
-                        className="block w-full py-3 px-4 mb-4 bg-black border border-gray-600 rounded-md text-white focus:outline-none focus:border-gray-400"
+                        className="block w-full py-3 px-4 mb-4 bg-stone-700 rounded-md text-white focus:outline-none focus:bg-stone-500"
                     />
                     {error && <span className="text-red-500">{error}</span>}
-                    <button type="submit" className="w-full py-3 px-4 bg-red-600 text-white rounded-md hover:bg-red-500 focus:outline-none mt-8 focus:bg-red-600">Sign Up</button>
+                    <button type="submit" className="w-full py-3 px-4 bg-red-600 text-white rounded-md focus:outline-none mt-8">Sign Up</button>
                 </form>
                 <p className="text-gray-400 ">Already have an account? <Link to="/signin" className="text-white hover:underline">Sign in.</Link></p>
             </div>
