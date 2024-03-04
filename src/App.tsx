@@ -16,7 +16,7 @@ function App() {
     <BrowserRouter>
       <ToastContainer position='bottom-center' limit={1} />
 
-      <main className='bg-black'>
+      <main className='bg-zinc-900'>
         <Routes>
           <Route path="/" element={<HomePage />}></Route>
           <Route path="/signin" element={<SignInPage />}></Route>
