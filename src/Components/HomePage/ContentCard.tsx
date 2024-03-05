@@ -7,12 +7,6 @@ import CardHoverInterface from "../ContentCard/CardHoverInterface";
 
 
 
-// import { ChevronDownIcon } from '@heroicons/react/24/outline';
-// import { PlayIcon } from '@heroicons/react/24/solid';
-// import FavoriteButton from '@/components/FavoriteButton';
-
-
-
 const ContentCard = (props: { content: IContent }) => {
   const [hovered, setHovered] = useState<boolean>(false);
   const [showTrailer, setShowTrailer] = useState(false);
@@ -44,40 +38,40 @@ const ContentCard = (props: { content: IContent }) => {
 
 
   return (
-    <Card className='bg-transparent border-none'>
-      <CardContent className="flex aspect-square">
-        <div
-          onMouseLeave={handleMouseLeave}
-          onMouseEnter={handleMouseEnter}
-          className={`${hovered ? 'z-10' : ''
-            } h-auto transform transition-transform duration-500 hover:scale-150`}>
-          {!showTrailer &&
-            <img src={props.content.imgThumb.toString()} onClick={navToWatchPage} />
-          }
-          {showTrailer &&
-            <ReactPlayer
-              className="pointer-events-none"
-              muted
-              playing
-              loop
-              controls={false}
-              disablePictureInPicture
-              width={'100%'}
-              height={'60%'}
-              url={props.content.trailer.toString()}
-              onClick={navToWatchPage}>
+    <Card className='bg-transparent border-none h-full'>
+      <CardContent className="flex aspect-square p-0">
+        <div className="">
+          <div
+            onMouseLeave={handleMouseLeave}
+            onMouseEnter={handleMouseEnter}
+            className={`${hovered ? 'z-10' : ''
+              }transform transition-transform duration-500 hover:scale-150 flex flex-col`}>
+            {!showTrailer &&
+              <img src={props.content.imgThumb.toString()} onClick={navToWatchPage} />
+            }
+            {showTrailer &&
+              <ReactPlayer
+                className="pointer-events-none"
+                muted
+                playing
+                loop
+                controls={false}
+                disablePictureInPicture
+                width={'100%'}
+                height={'60%'}
+                url={props.content.trailer.toString()}
+                onClick={navToWatchPage}>
 
-            </ReactPlayer>
-          }
-          {hovered ?
-           <div className={`p-1 bg-zinc-800 shadow-2xl`}>
-            <CardHoverInterface content={props.content}></CardHoverInterface>
+              </ReactPlayer>
+            }
+            {hovered ?
+              <div className={`p-1 bg-zinc-800 shadow-2xl`}>
+                <CardHoverInterface content={props.content}></CardHoverInterface>
+              </div>
+              : <></>}
           </div>
-           : <></>}
-
-
-
         </div>
+
       </CardContent>
     </Card >
   );
