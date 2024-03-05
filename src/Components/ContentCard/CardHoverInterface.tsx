@@ -43,7 +43,7 @@ const CardHoverInterface = (props: { content: IContent }) => {
                     {userInfo ? userInfo.myList.some((item: IContent) => item._id === props.content._id) ? (
                         <button onClick={() => removeToMyList()} className="rounded-full border border-gray-100 text-gray-100 px-2 mr-0.5"><i className="fa-solid fa-minus" /></button>
                     ) : (
-                        <button onClick={() => addToMyList()} className="rounded-full border border-zinc-900 text-gray-100 px-2 mr-0.5"><i className="fa-solid fa-plus" /></button>
+                        <button onClick={() => addToMyList()} className="rounded-full border border-gray-100 text-gray-100 px-2 mr-0.5"><i className="fa-solid fa-plus" /></button>
                     ) : <></>}
                     <button className='rounded-full border border-gray-100 text-gray-100 px-2 mr-0.5'>
                         <i className='fa-solid fa-thumbs-up' />
