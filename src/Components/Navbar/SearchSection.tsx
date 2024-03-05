@@ -1,8 +1,21 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const SearchSection = () => {
     const [isSearchOpen, setIsSearchOpen] = useState(false);
     const [searchText, setSearchText] = useState("");
+
+    useEffect(() => {
+        const handleClickOutside = () => {
+            if (!(searchText.length>0)) {
+                setIsSearchOpen(false);
+            }
+        };
+
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, []);
 
     const toggleSearch = () => {
         setIsSearchOpen(prevState => !prevState);
