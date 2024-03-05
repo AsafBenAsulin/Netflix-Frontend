@@ -45,7 +45,7 @@ const ContentCard = (props: { content: IContent }) => {
 
   return (
     <Card className='bg-transparent border-none'>
-      <CardContent className="flex aspect-square items-center justify-center p-0">
+      <CardContent className="flex aspect-square">
         <div
           onMouseLeave={handleMouseLeave}
           onMouseEnter={handleMouseEnter}

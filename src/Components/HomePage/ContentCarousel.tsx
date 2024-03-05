@@ -12,7 +12,7 @@ const ContentsCarousel = (props: { contents: [IContent], title: string | undefin
 
   return (
     <div className="px-16 py-2">
-      <h2 className="w-56 cursor-pointer text-sm font-semibold text-white md:text-2xl whitespace-nowrap mb-2">
+      <h2 className="cursor-pointer text-sm font-semibold text-white md:text-2xl whitespace-nowrap mb-2">
         {props.title}
       </h2>
 
