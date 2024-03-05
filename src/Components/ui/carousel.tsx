@@ -212,11 +212,11 @@ const CarouselPrevious = React.forwardRef<
         !canScrollPrev && 'invisible',
         className
       )}
-      // disabled={!canScrollPrev}
+      disabled={!canScrollPrev}
       onClick={scrollPrev}
       {...props}>
       <FontAwesomeIcon icon={faChevronLeft} style={{ color: "#ffffff", }} />
-      {/* <ArrowLeft size={20} /> */}
+      {/* <ArrowLeft size={20} />  */}
       <span className="sr-only">Previous slide</span>
     </Button>
   );
@@ -242,11 +242,11 @@ const CarouselNext = React.forwardRef<
         !canScrollNext && 'invisible',
         className
       )}
-      // disabled={!canScrollNext}
+      disabled={!canScrollNext}
       onClick={scrollNext}
       {...props}>
       <FontAwesomeIcon icon={faChevronRight} style={{ color: "#ffffff", }} />
-      {/* <ArrowRight size={20} /> */}
+      {/* <ArrowRight size={20}  />  */}
       <span className="sr-only">Next slide</span>
     </Button>
   );

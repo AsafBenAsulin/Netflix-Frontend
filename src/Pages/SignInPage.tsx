@@ -1,11 +1,11 @@
 import { useContext, useEffect, useRef } from "react";
 import Title from "../Components/shared/Title";
 import { toast } from "react-toastify";
-import { postData } from "../Helpers/httpRequest"
+import { getData, postData } from "../Helpers/httpRequest"
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import Cookies from "js-cookie";
 import { User } from "../Context/user";
-import { USER_SIGNIN } from "../Helpers/Actions";
+import { GET_MY_LIST, USER_SIGNIN } from "../Helpers/Actions";
 import { getError } from "@/Helpers/utils";
 
 const SignInPage = () => {
@@ -21,7 +21,9 @@ const SignInPage = () => {
     useEffect(() => {
         if (userInfo) {
             navigate(redirect)
-        }
+        }else(
+            navigate('/signin')
+        )
     }, [navigate, redirect, userInfo]);
 
     const loginHandler = async (e: React.FormEvent<HTMLFormElement> | React.MouseEvent<HTMLButtonElement, MouseEvent>, action: string) => {
@@ -41,7 +43,8 @@ const SignInPage = () => {
             const data = await postData("/api/v1/users/signin", { email: emailValue, password: passwordValue })
             if (data) {
                 ctxDispatch({ type: USER_SIGNIN, payload: data })
-                Cookies.set("userInfo", JSON.stringify(data));
+                localStorage.setItem("userInfo",JSON.stringify(data));
+                Cookies.set("token",data.token)
                 navigate(redirect);
             }
         } catch (error) {
