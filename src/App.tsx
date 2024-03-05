@@ -19,6 +19,7 @@ function App() {
     <HelmetProvider>
     <BrowserRouter>
       <ToastContainer position="top-right" />
+
       <main className='bg-zinc-900 overflow-x-hidden min-h-screen'>
         <Routes>
           <Route path="/" element={<HomePage />}></Route>

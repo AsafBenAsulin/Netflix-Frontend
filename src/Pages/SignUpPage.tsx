@@ -4,7 +4,6 @@ import { useContext, useEffect } from "react";
 import { User } from "../Context/user";
 import FormOrChecker from "@/Components/SignUpPage/FormOrChecker";
 
-
 const SignUpPage = () => {
 
     const navigate = useNavigate();

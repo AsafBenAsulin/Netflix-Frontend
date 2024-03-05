@@ -2,9 +2,8 @@ import { useContext, useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { User } from '@/Context/user';
 import '@fortawesome/fontawesome-free/css/all.css';
-import SearchSection from '../Navbar/SearchSection';
-import ProfileSection from '../Navbar/ProfileSection';
-
+import SearchSection from '../NavBar/SearchSection';
+import ProfileSection from '../NavBar/ProfileSection';
 
 const NavBar = () => {
     const navigate = useNavigate();
