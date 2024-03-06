@@ -1,3 +1,4 @@
+import Title from '@/Components/shared/Title';
 import reducerHook from '@/Hooks/reducerHook';
 import { IContent } from '@/Models/IContent';
 import { IState } from '@/Models/States/IState';
@@ -35,6 +36,7 @@ const WatchPage = () => {
 
   return (
     <div className="relative" onMouseMove={handleMouseMove}>
+      <Title title="Netflix"></Title>
       {showLink && (
         <Link className='flex flex-row items-center text-white absolute top-4 left-4 z-10 text-lg' to={"/"}>
           <i className="fa-solid fa-angle-left"></i>
