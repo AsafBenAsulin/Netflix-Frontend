@@ -12,7 +12,7 @@ const CardHoverInterface = (props: { content: IContent }) => {
     const navigate = useNavigate();
 
     const navToWatchPage = () => {
-        navigate(`/${props.content._id.toString()}`)
+        navigate(`/watch/${props.content._id.toString()}`)
     }
     const addToMyList = async () => {
         try {

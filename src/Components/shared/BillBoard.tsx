@@ -40,8 +40,8 @@ const BillBoard= (props:{isSeries:string}) => {
 
     return (
         
-        <div >
-        {state.data?<div style={{ width: '100%', height: '80vh', position: 'relative' }}
+        <div>
+        {state.data?<div style={{ width: '100%', height: '80vh', position: 'relative', overflow: 'hidden' }}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}>
             {!showTrailer && (

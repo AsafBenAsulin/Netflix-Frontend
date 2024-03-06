@@ -1,8 +1,23 @@
 import { useEffect, useState, useRef } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const SearchSection = () => {
     const [isOpen, setIsOpen] = useState(false);
-    const node = useRef<HTMLDivElement>(null);  // Create a ref
+    const node = useRef<HTMLDivElement>(null);  
+    const [ query, setQuery ] = useState("");
+    const navigate=useNavigate();
+    let {pathname}=useLocation();
+  
+    useEffect(() => {
+      if(query.length==0){
+        navigate("/")
+      }else{
+        navigate(`/search/${query}`);
+        }
+    }, [query]);
+  
+          
+  
 
     const handleClickOutside = (e: MouseEvent) => {
         if (node.current?.contains(e.target as Node)) {
@@ -11,8 +26,7 @@ const SearchSection = () => {
         }
         // outside click 
         setIsOpen(false);
-    };
-
+    };  
     useEffect(() => {
         // add when mounted
         document.addEventListener("mousedown", handleClickOutside);
@@ -32,6 +46,7 @@ const SearchSection = () => {
                     }`}
                 type="text"
                 placeholder="Search..."
+                onChange={(e)=>setQuery(e.target.value)}
             />
         </div>
     );
