@@ -21,7 +21,7 @@ const BillBoard= (props:{isSeries:string}) => {
   reducerHook( `/api/v1/content/getContentBillBoard/${props.isSeries}`,dispatch)
   },[])
 
-  const handleMouseEnter = () => {
+  const handleLoading = () => {
     setTimer(
       setTimeout(() => {
         setShowTrailer(true);
@@ -29,28 +29,20 @@ const BillBoard= (props:{isSeries:string}) => {
     );
   };
 
-  const handleMouseLeave = () => {
-    setShowTrailer(false);
-    if (timer) {
-      clearTimeout(timer);
-      setTimer(null);
-    }
-  };
-
 
     return (
         
         <div>
         {state.data?<div style={{ width: '100%', height: '80vh', position: 'relative', overflow: 'hidden' }}
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}>
+        onLoad={handleLoading}
+       >
             {!showTrailer && (
               <BillBoardImage image={state.data.imgThumb.toString()}/>
             )}
             {showTrailer &&  (
               <BillBoardVideo trailer={state.data.trailer.toString()}/>
             )}
-            <BillBoardContent title={state.data.title} description={state.data.description} hideDescription={showTrailer} _id={state.data._id} />
+            <BillBoardContent imgTitle={state.data.imgTitle} description={state.data.description} _id={state.data._id} />
         </div>:<div></div>}
         
         </div>
