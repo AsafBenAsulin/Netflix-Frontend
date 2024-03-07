@@ -1,7 +1,6 @@
 import { IUserState } from "@/Models/States/IUserState";
-import { USER_SIGNIN, USER_SIGNOUT, ADD_TO_MY_LIST, REMOVE_FROM_MY_LIST,GET_MY_LIST } from "../Helpers/Actions";
+import { USER_SIGNIN, USER_SIGNOUT, ADD_TO_MY_LIST, REMOVE_FROM_MY_LIST } from "../Helpers/Actions";
 import { MyAction } from "@/Models/Action/MyAction";
-import Cookies from "js-cookie";
 
 const userReducer = (state: IUserState, action: MyAction) => {
   const type = action.type;
@@ -12,7 +11,7 @@ const userReducer = (state: IUserState, action: MyAction) => {
       return { ...state, userInfo: payload };
     }
     case USER_SIGNOUT: {
-      Cookies.remove("token");
+
       return { ...state, userInfo:null};
     }
     case ADD_TO_MY_LIST: {
