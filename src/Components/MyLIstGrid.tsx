@@ -1,7 +1,7 @@
-import ContentCard from "@/Components/HomePage/ContentCard";
+
 import { User } from "@/Context/user";
 
-import { useContext, useEffect, useReducer } from "react";
+import { useContext} from "react";
 import GridView from "./shared/GridView";
 
 

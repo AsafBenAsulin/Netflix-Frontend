@@ -37,20 +37,20 @@ const CardHoverInterface = (props: { content: IContent }) => {
         <div className='flex flex-col'>
             <div className='flex flex-row justify-between'>
                 <div>
-                    <button onClick={navToWatchPage} className="rounded-full bg-white border border-zinc-900 px-2 mr-0.5">
+                    <button onClick={navToWatchPage} className="rounded-full bg-white border border-zinc-900 px-2 mr-0.5 w-8 h-8">
                         <i className="fa-solid fa-play"></i>
                     </button>
                     {userInfo ? userInfo.myList.some((item: IContent) => item._id === props.content._id) ? (
-                        <button onClick={() => removeToMyList()} className="rounded-full border border-gray-100 text-gray-100 px-2 mr-0.5"><i className="fa-solid fa-minus" /></button>
+                        <button onClick={() => removeToMyList()} className="rounded-full border border-gray-100 text-gray-100 px-2 mr-0.5 w-8 h-8"><i className="fa-solid fa-minus" /></button>
                     ) : (
-                        <button onClick={() => addToMyList()} className="rounded-full border border-gray-100 text-gray-100 px-2 mr-0.5"><i className="fa-solid fa-plus" /></button>
+                        <button onClick={() => addToMyList()} className="rounded-full border border-gray-100 text-gray-100 px-2 mr-0.5 w-8 h-8"><i className="fa-solid fa-plus" /></button>
                     ) : <></>}
-                    <button className='rounded-full border border-gray-100 text-gray-100 px-2 mr-0.5'>
+                    <button className='rounded-full border border-gray-100 text-gray-100 px-2 mr-0.5 w-8 h-8'>
                         <i className='fa-solid fa-thumbs-up' />
                     </button>
                 </div>
                 <div>
-                    <button className='rounded-full border border-gray-100 text-gray-100 px-2'>
+                    <button className='rounded-full border border-gray-100 text-gray-100 px-2 w-8 h-8'>
                         <i className="fa-solid fa-angle-down" />
                     </button>
                 </div>
