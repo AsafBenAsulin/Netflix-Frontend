@@ -5,6 +5,7 @@ import '@fortawesome/fontawesome-free/css/all.css';
 import SearchSection from '../Navbar/SearchSection';
 import ProfileSection from '../Navbar/ProfileSection';
 import BrowseSection from '../Navbar/browseSection';
+import Logo from "../../../assets/Netflix-Logo.wine.svg"
 
 
 const NavBar = () => {
@@ -42,7 +43,7 @@ const NavBar = () => {
         <div className={`p-2 fixed top-0 left-0 right-0 z-50 text-white transition-all duration-500 ${navbarClass}`}>
             <div className="flex justify-between items-center">
                 <div className='flex items-center ml-0 md:ml-8'>
-                    <img src="\assets\Logonetflix.png" alt="Netflix Logo" className="h-4 md:h-8 w-10 md:w-24 mr-1 md:mr-0 mt-2 ml-0 md:ml-5" onClick={() => navigate("/")} />
+                    <img src={Logo} alt="Netflix Logo" className="h-4 md:h-8 w-10 md:w-24 mr-1 md:mr-0 mt-2 ml-0 md:ml-5" onClick={() => navigate("/")} />
                     <BrowseSection />
                 </div>
                 <div className='flex justify-between-right items-center mr-10 space-x-4 md:space-x-6'>
