@@ -7,8 +7,5 @@ const baseURL = import.meta.env.VITE_BASE_URL;
 axios.defaults.baseURL = baseURL;
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-
-
     <App />
-
 )
