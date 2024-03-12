@@ -7,7 +7,7 @@ const BillBoardVideo=(props:{trailer:String})=> {
       };
     
   return (
-    <div className="h-[56.25vw]" style={videoStyle}>
+    <>
     <ReactPlayer
                 className="pointer-events-none" 
                 muted
@@ -20,7 +20,7 @@ const BillBoardVideo=(props:{trailer:String})=> {
                 height={'100%'}
                 style={videoStyle}
                 />
-    </div>
+    </>
   )
 }
 
