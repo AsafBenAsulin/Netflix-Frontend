@@ -37,6 +37,7 @@ const ResetPasswordPage = () => {
             </div>
             <div className="text-white w-full flex items-center flex-col mt-20 z-10">
                 <h1 className="text-3xl md:text-5xl font-bold text-center">Enter your email</h1>
+                <h2 className="text-xl md:text-3xl font-bold text-center">Check spam folder</h2>
 
                 <form onSubmit={checkEmail} className="flex flex-col md:flex-row items-center mt-5 mb-5">
                     <input
