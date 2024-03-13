@@ -13,6 +13,7 @@ import { HelmetProvider } from 'react-helmet-async'
 import {  UserProvider } from './Context/user.tsx'
 import SearchPage from './Pages/SearchPage.tsx';
 import NavBar from './Components/shared/NavBar.tsx';
+import ResetPasswordPage from './Pages/ResetPasswordPage.tsx';
 
 const App=()=> {
 
@@ -35,6 +36,7 @@ const App=()=> {
           <Route path="/mylist" element={<MyListPage />}></Route>
           <Route path="/watch/:id" element={<WatchPage />}></Route>
           <Route path="/search/:title" element={<SearchPage />}></Route>
+          <Route path="/resetpassword/:token" element={<ResetPasswordPage />}></Route>
         </Routes>
       </main>
     </BrowserRouter>
