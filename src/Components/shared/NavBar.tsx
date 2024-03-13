@@ -35,7 +35,7 @@ const NavBar = () => {
     if (
         pathname === "/signin" ||
         pathname === "/signup" ||
-        pathname.includes("/resetpassword") ||
+        pathname.includes("/reset") ||
         pathname.includes("/watch"))
         return null;
 
