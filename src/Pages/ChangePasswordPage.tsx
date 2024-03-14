@@ -44,8 +44,13 @@ const ChangePasswordPage = () => {
         <div className="flex items-center bg-cover min-h-screen md:bg-[url('../assets/netflix-bg.jpg')]  flex-col">
             <div className="absolute inset-0 bg-black opacity-50"></div>
             <Title title="Reset password" />
-            <div className="mx-auto ml-0 z-10">
-                <img src={Logo} alt="Netflix Logo" className="h-20 md:h-20 w-22 md:w-60" />
+            <div className="z-10 flex flex-row items-center justify-between mx-auto ml-0 px-4 w-full">
+                <div>
+                    <img src={Logo} alt="Netflix Logo" className="h-20 md:h-20 w-22 md:w-60" />
+                </div>
+                <div className="mr-0 ">
+                    <button type="button" onClick={() => navigate("/signin")} className="py-3 px-4 bg-red-600 text-white rounded-md">Sign In</button>
+                </div>
             </div>
             <div className="text-white w-full flex items-center flex-col mt-20 z-10">
                 <div className="w-full max-w-md px-10 py-10 bg-none md:bg-black bg-opacity-80 rounded-lg md:px-6 md:py-6">
