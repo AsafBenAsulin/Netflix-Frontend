@@ -30,6 +30,7 @@ const BrowseSection = () => {
                 <Link className='p-1' to={'/series'} >TV Shows</Link>
                 <Link className='p-1' to={'/movies'} >Movies</Link>
                 <Link className='p-1' to={'/mylist'} >My List</Link>
+                <Link className='p-1' to={'/addcontent'} >add</Link>
             </div>
             <div className="lg:hidden flex flex-row items-center gap-2 cursor-pointer relative" onMouseEnter={showDropdownMenu} onMouseLeave={hideDropdownMenu}>
                 <div className='flex flex-row items-center'>
@@ -37,7 +38,7 @@ const BrowseSection = () => {
                     <i className={`fa-solid fa-caret-down transform transition-transform duration-300 ${dropdownIconClass}`}></i>
                 </div>
                 {showDropdown && (
-                    <div className="absolute flex flex-col rounded shadow-lg mt-40 py-2 w-48 bg-black items-center bg-opacity-90 z-10 border-t border-t-4">
+                    <div className="absolute flex flex-col rounded shadow-lg mt-40 py-2 w-48 bg-black items-center bg-opacity-90 z-10 border-t-4">
                         <Link className='p-1' to={'/'} >Home</Link>
                         <Link className='p-1' to={'/series'} >TV Shows</Link>
                         <Link className='p-1' to={'/movies'} >Movies</Link>
