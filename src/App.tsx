@@ -23,10 +23,8 @@ const App=()=> {
     <UserProvider>
     <HelmetProvider>
     <BrowserRouter>
-      <ToastContainer position="top-right" />
-
+      <ToastContainer theme='dark' position="top-right" />
       <main className='bg-zinc-900 overflow-x-hidden min-h-screen'>
-
         <NavBar/>
         <Routes>          
         <Route path="/signin" element={<SignInPage />}></Route>
