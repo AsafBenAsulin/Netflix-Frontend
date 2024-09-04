@@ -7,4 +7,6 @@ The project also incorporated ShadcnUI components for a polished user interface,
 Make sure you run the backend server from here:
 https://github.com/AsafBenAsulin/NetflixClone-Backend
 
+run with npm run dev
+
 
